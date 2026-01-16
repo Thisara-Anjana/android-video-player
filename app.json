@@ -1,0 +1,6 @@
+{
+    "name": "android-video-player",
+    "displayName": "Android Video Player",
+    "version": "1.0.0",
+    "description": "A responsive video player web application built with React and Ant Design."
+}

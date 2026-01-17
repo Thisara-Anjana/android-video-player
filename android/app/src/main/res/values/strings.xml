@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Nova Player</string>
+    <string name="title_activity_main">Nova Player</string>
+    <string name="package_name">com.example.androidvideoplayer</string>
+    <string name="custom_url_scheme">com.example.androidvideoplayer</string>
+    
+    <!-- New feature strings -->
+    <string name="playback_speed">Playback Speed</string>
+    <string name="brightness">Brightness</string>
+    <string name="volume">Volume</string>
+</resources>

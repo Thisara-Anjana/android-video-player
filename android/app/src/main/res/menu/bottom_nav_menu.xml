@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_nav_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_folders"
+        android:icon="@drawable/ic_nav_folders"
+        android:title="Folders" />
+    <item
+        android:id="@+id/nav_videos"
+        android:icon="@drawable/ic_nav_videos"
+        android:title="Videos" />
+    <item
+        android:id="@+id/nav_audio"
+        android:icon="@drawable/ic_nav_audio"
+        android:title="Audio" />
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_nav_more"
+        android:title="More" />
+</menu>

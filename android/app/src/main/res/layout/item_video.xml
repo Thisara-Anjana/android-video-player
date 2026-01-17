@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Thumbnail Container: 16:10 Ratio (e.g. 140dp width -> 87.5dp height) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/thumbnailCard"
+        android:layout_width="140dp"
+        android:layout_height="88dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/thumbnailImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_media_play" />
+            
+        <!-- Progress Bar Placeholder (Bottom 2dp) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#33FFFFFF"
+            android:layout_gravity="bottom"/>
+            
+        <TextView
+            android:id="@+id/durationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#99000000"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="4dp"/>
+            
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Info Container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@id/thumbnailCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/thumbnailCard"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnailCard">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif"
+            android:textColor="#E0E0E0"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Metadata Chips Line -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/sizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#9E9E9E"
+                android:fontFamily="sans-serif"
+                android:background="#22FFFFFF"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginEnd="8dp" />
+                
+             <!-- We can add Resolution chip here later -->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
